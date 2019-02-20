@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-center-native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: D:/20190131/config-center/src/main/resources/config
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      trace:
+        enabled: true
+  profiles:
+    active: native
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 8777
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
